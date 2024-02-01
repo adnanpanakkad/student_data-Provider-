@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_list_provider/provider/img_function.dart';
 
-
 class StudentPhoto extends StatelessWidget {
   const StudentPhoto({
     super.key,
@@ -22,7 +21,7 @@ class StudentPhoto extends StatelessWidget {
                     onTap: () => getimage(imageProvider),
                     child: const CircleAvatar(
                       radius: 80,
-                      backgroundImage: AssetImage('lib/assests/avatar.png'),
+                      backgroundImage: AssetImage('lib/assets/pokiman.png'),
                     ),
                   )
                 : GestureDetector(
@@ -33,14 +32,14 @@ class StudentPhoto extends StatelessWidget {
                     ),
                   );
           },
-        ), 
+        ),
         Positioned(
           bottom: 5,
           right: 5,
           child: Consumer<StudentImage>(
             builder: (context, value, child) => GestureDetector(
               onTap: () => getimage(value),
-              child: const CircleAvatar( 
+              child: const CircleAvatar(
                 radius: 20,
                 child: Icon(Icons.add),
               ),

@@ -6,7 +6,6 @@ import 'package:student_list_provider/provider/img_function.dart';
 import 'package:student_list_provider/provider/message.dart';
 import 'package:student_list_provider/provider/student_function.dart';
 
-
 final formKey = GlobalKey<FormState>();
 TextEditingController nameController = TextEditingController();
 TextEditingController mailController = TextEditingController();
@@ -25,9 +24,10 @@ class ScreenEdit extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
           'Edit Student Details',
-          style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: Colors.grey,
       ),
       body: Form(
         key: formKey,
@@ -187,16 +187,17 @@ getimage(StudentImage value) async {
 void update(int index, BuildContext context) {
   final img = Provider.of<StudentImage>(context, listen: false);
   final data = Provider.of<StudentData>(context, listen: false);
-  final alert=Provider.of<AlertProvider>(context,listen: false); 
+  final alert = Provider.of<AlertProvider>(context, listen: false);
   final studentObject = StudentModel(
-      id: DateTime.now(),
-      profilepicture: img.imgPath!,
-      name: nameController.text.trim(),
-      email: mailController.text.trim(),
-      age: int.parse(ageController.text.trim()),
-      contact: int.parse(contactController.text.trim()), );
+    id: DateTime.now(),
+    profilepicture: img.imgPath!,
+    name: nameController.text.trim(),
+    email: mailController.text.trim(),
+    age: int.parse(ageController.text.trim()),
+    contact: int.parse(contactController.text.trim()),
+  );
   data.editStudent(index, studentObject);
   img.imgPath = null;
-  alert.success(context); 
+  alert.success(context);
   Navigator.of(context).pop();
 }

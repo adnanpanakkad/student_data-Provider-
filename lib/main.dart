@@ -35,9 +35,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade800),
-        ),
+        theme:ThemeData.dark(),
         home: const ScreenHome(),
         debugShowCheckedModeBanner: false,
       ),
