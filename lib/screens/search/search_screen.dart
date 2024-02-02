@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:student_list_provider/provider/student_function.dart';
 import 'package:student_list_provider/screens/profile/profile_screen.dart';
 
-
 class Search extends SearchDelegate {
   @override
   List<Widget>? buildActions(BuildContext context) {
@@ -68,7 +67,6 @@ class Search extends SearchDelegate {
   @override
   Widget buildSuggestions(BuildContext context) {
     final studentProvider = Provider.of<StudentData>(context);
-
     return Padding(
       padding: const EdgeInsets.only(top: 15),
       child: ListView.builder(
