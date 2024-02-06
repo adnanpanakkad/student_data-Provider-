@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_list_provider/models/student_model.dart';
 import 'package:student_list_provider/provider/img_function.dart';
-import 'package:student_list_provider/provider/message.dart';
+import 'package:student_list_provider/provider/messages.dart';
 import 'package:student_list_provider/provider/student_function.dart';
 import 'package:student_list_provider/screens/add/widgets/student_photo.dart';
 
@@ -41,6 +41,7 @@ class ScreenAdd extends StatelessWidget {
                   height: 20,
                 ),
                 TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   keyboardType: TextInputType.name,
                   controller: nameController,
                   decoration: const InputDecoration(
@@ -56,6 +57,7 @@ class ScreenAdd extends StatelessWidget {
                   height: 20,
                 ),
                 TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   keyboardType: TextInputType.emailAddress,
                   controller: mailController,
                   decoration: const InputDecoration(
@@ -71,6 +73,7 @@ class ScreenAdd extends StatelessWidget {
                   height: 20,
                 ),
                 TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   keyboardType: TextInputType.number,
                   controller: ageController,
                   maxLength: 2,
@@ -86,6 +89,7 @@ class ScreenAdd extends StatelessWidget {
                   height: 5,
                 ),
                 TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   keyboardType: TextInputType.number,
                   controller: contactController,
                   maxLength: 10,

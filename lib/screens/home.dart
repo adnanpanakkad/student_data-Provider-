@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:student_list_provider/provider/message.dart';
+import 'package:student_list_provider/provider/messages.dart';
 import 'package:student_list_provider/provider/student_function.dart';
 import 'package:student_list_provider/screens/add/add_student.dart';
 import 'package:student_list_provider/screens/profile/profile_screen.dart';
@@ -13,7 +13,7 @@ class ScreenHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final studentProvider = Provider.of<StudentData>(context);
+    final studentProvider = Provider.of<StudentData>(context );
     studentProvider.getStudent();
     return Scaffold(
       appBar: AppBar(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_list_provider/models/student_model.dart';
 import 'package:student_list_provider/provider/img_function.dart';
-import 'package:student_list_provider/provider/message.dart';
+import 'package:student_list_provider/provider/messages.dart';
 import 'package:student_list_provider/provider/student_function.dart';
 
 final formKey = GlobalKey<FormState>();
