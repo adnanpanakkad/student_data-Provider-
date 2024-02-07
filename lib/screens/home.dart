@@ -13,7 +13,7 @@ class ScreenHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final studentProvider = Provider.of<StudentData>(context );
+    final studentProvider = Provider.of<StudentData>(context);
     studentProvider.getStudent();
     return Scaffold(
       appBar: AppBar(
